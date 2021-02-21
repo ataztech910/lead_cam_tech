@@ -1,0 +1,19 @@
+version: "3.2"
+services:
+  web:
+    build: 
+      context: ./web_interface
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    volumes:
+      - ./shared_files:/usr/src/app/shared
+      - /usr/src/app
+  camera:
+    build: 
+      context: ./cameras_docker
+      dockerfile: ./Dockerfile
+    stdin_open: true
+    volumes:
+      - ./shared_files:/usr/src/app/shared
+      - /usr/src/app
+    # entrypoint: ./start.sh
