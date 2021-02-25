@@ -8,6 +8,8 @@ services:
     volumes:
       - ./shared_files:/usr/src/app/shared
       - /usr/src/app
+    ports:
+      - "8000:8000"  
   camera:
     build: 
       context: ./cameras_docker
@@ -16,4 +18,3 @@ services:
     volumes:
       - ./shared_files:/usr/src/app/shared
       - /usr/src/app
-    # entrypoint: ./start.sh
