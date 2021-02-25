@@ -4,4 +4,4 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-CMD [ "python", "./create-a-file.py" ]
+CMD [ "python3", "./manage.py", "runserver" ]
