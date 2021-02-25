@@ -1,0 +1,15 @@
+<div>
+    <div class="menu">
+    <div class="menu__logo">
+        <img src="{{ static }}/camera.png" alt="">
+    </div> 
+    {% for item in menu %}
+        <a href="/{{ item.id }}" class="menu__item" {% if item.id in request.path%} id="active_left_menu" {% endif %}>
+            <div class="menu__item__icon">
+                <img src="{{ static }}/{{ item.id }}.svg" alt="{{item.value}}" />
+            </div>
+            <div class="menu__item__description">{{item.value}}</div>
+        </a>
+    {% endfor %}
+    </div>
+</div>

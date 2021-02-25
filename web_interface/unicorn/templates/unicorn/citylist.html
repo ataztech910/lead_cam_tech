@@ -1,0 +1,19 @@
+<div>
+    <div class="camerasList">
+        <h1>Площадки</h1>
+        <input class="camerasList__search-input" unicorn:model="state" placeholder="State name" id="state-name" type="text">
+        {% regroup addresses by city_id as city_list %}
+        
+        <ul>
+            {% for item in city_list %}
+            <li>{{item.grouper}}</li>
+            <ul>
+                {% for city in item.list %}
+                <li><a href="/cameras/list/{{city.id}}">{{city.address}}</a></li>
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </ul>
+        
+    </div>
+</div>

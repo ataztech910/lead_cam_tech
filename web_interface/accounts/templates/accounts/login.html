@@ -1,0 +1,39 @@
+{% load unicorn %}
+<html>
+  <head>
+    {% load sass_tags %}
+    {% unicorn_scripts %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="{% sass_src 'main.sass' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'accounts.sass' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="auth">
+        <div class="auth__header">
+            <h1>Авторизация</h1>
+        </div>
+        <form method="post" action="">
+          {% csrf_token %}
+          <div class="auth__form">
+          {% if errors %}
+          <p>Не верный логин или пароль</p>
+          {% endif %}  
+
+            <div class="auth__form__input">
+              <input type="text" name="username" placeholder="Логин" />
+            </div>
+            <div class="auth__form__input">
+              <input type="password" name="password" placeholder="Пароль" />
+            </div>
+            <div class="auth__form__button">
+              <button type="submit">Вход</button>
+            </div>
+          </div>
+          <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    </div>
+    <div class="footer">
+      <p>Camsecuro 2021</p>
+    </div>
+  </body>
+</html>

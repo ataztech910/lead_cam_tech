@@ -1,0 +1,24 @@
+.menu__logo {
+  margin: 0 auto;
+  width: 35%;
+  padding: 2rem; }
+  .menu__logo img {
+    width: 100%; }
+
+.menu__item {
+  padding: 2rem;
+  text-align: center;
+  display: block;
+  color: #202020;
+  text-decoration: none;
+  transition: 0.3s; }
+  .menu__item:hover {
+    background: #ececec; }
+  .menu__item__icon {
+    width: 60%;
+    margin: 0 auto; }
+
+#active_left_menu {
+  background: #f7f7f7; }
+
+/*# sourceMappingURL=leftmenu.css.map */

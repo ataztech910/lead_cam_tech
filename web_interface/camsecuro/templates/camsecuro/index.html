@@ -1,0 +1,27 @@
+{% load unicorn %}
+<html>
+  <head>
+    {% load sass_tags %}
+    {% unicorn_scripts %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="https://player.wowza.com/player/latest/wowzaplayer.min.js"></script>
+    <script type="text/javascript" src="/static/main.js"></script>
+    <link href="{% sass_src 'main.sass' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'leftmenu.sass' %}" rel="stylesheet" type="text/css" />
+    <link href="{% sass_src 'camstyles.sass' %}" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    {% csrf_token %}
+    <div class="dashboard">
+      <div class="dashboard__side left">
+        {% unicorn 'leftmenu' %}
+      </div>
+      <div class="dashboard__side right">
+        {% unicorn 'camlist' id="id" %}
+      </div>
+    </div>
+    <div class="footer">
+      <p>Camsecuro 2021</p>
+    </div>
+  </body>
+</html>
