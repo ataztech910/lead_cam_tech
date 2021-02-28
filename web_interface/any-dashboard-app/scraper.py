@@ -39,4 +39,13 @@ def parseHtmlFromUrl(urlForParse):
     return decode['data']
 
 result = remapCollectedData(parseHtmlFromUrl("https://mfc66.ru/otdeleniya"))
-print(*result, sep = "\n") 
+
+groupedByCity = {}
+for item in result:
+    if item[0] not in groupedByCity:
+        groupedByCity[item[0]] = []
+    groupedByCity[item[0]].append(item[1])
+
+for item in groupedByCity:
+    print(item)
+    print(groupedByCity[item])
