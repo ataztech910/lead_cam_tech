@@ -1,7 +1,5 @@
 FROM python:3
 
-
-
 COPY . .
 
 RUN mkdir -p /usr/src/app/any-dashboard-app
