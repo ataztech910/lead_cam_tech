@@ -26,7 +26,7 @@ SECRET_KEY = '4(j+emu@n)!@)x9sp97dp#aki3xz-1!7^f4(-#zo(*s!@t9h=1'
 DEBUG = True
 HTML_MINIFY = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.25', '*']
 
 
 # Application definition
