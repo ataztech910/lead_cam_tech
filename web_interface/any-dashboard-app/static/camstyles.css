@@ -1,10 +1,35 @@
 .camerasList {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
   width: 95%;
   margin: 0 auto;
   box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
-  padding: 1rem; }
+  border-radius: 10px;
+  padding: 1rem;
+  height: calc(100vh - 85px); }
+  .camerasList__search-input {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    border-radius: 25px;
+    margin: 1rem 0;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.01);
+    outline: none;
+    transition: 0.5s; }
+    .camerasList__search-input::before {
+      content: "\f041"; }
+    .camerasList__search-input:focus {
+      box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05); }
+  .camerasList__city {
+    margin-left: 1rem; }
+    .camerasList__city li {
+      font-weight: bold; }
+    .camerasList__city__address li {
+      margin: 0.5rem 1rem; }
+      .camerasList__city__address li a {
+        font-weight: normal;
+        transition: 0.5s; }
+        .camerasList__city__address li a:hover {
+          text-decoration: underline; }
   .camerasList__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
