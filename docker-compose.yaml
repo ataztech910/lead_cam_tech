@@ -18,7 +18,7 @@ services:
     volumes:
       - ./shared_files:/usr/src/app/shared
       - /usr/src/app
-      ports:
+    ports:
       - "8081:8081" 
       - "1935:1935" 
       - "4444:4444" 
