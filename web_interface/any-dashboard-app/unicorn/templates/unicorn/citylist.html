@@ -1,20 +1,25 @@
 <div>
     <div class="camerasList">
         <h1>Площадки</h1>
-        <!-- <span><i class="fa fa-map-marker" aria-hidden="true"></i></span> -->
         <input class="camerasList__search-input" unicorn:model="state" placeholder="Поиск" id="state-name" type="text">
-        {% regroup addresses by city_id as city_list %}
+        {% regroup addresses by city_id.city_name.0 as city_list %}
         
-        <ul class="camerasList__city">
+        <div class="camerasList__city">
             {% for item in city_list %}
-            <li>{{item.grouper}}</li>
-            <ul class="camerasList__city__address">
-                {% for city in item.list %}
-                <li><a href="/cameras/list/{{city.id}}">{{city.address}}</a></li>
-                {% endfor %}
-            </ul>
+            <div class="city_element">
+                <div class="litera">{{item.grouper}}</div>
+                <div class="camerasList__city__address">
+                    {% for city in item.list %}
+                    <div>
+                        <a href="/cameras/list/{{city.id}}">
+                            <b>{{city.city_id}}</b> {{city.address}}
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
         
     </div>
 </div>

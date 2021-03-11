@@ -1,27 +1,25 @@
 <div class="camerasList">
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__element">
+        <a class="breadcrumbs__element__link" href="/cameras">Камеры</a>
+      </li>
+      <li class="breadcrumbs__element">
+        {{address}}
+      </li>
+    </ul>
     <h1>{{address}}</h1>
     {% if cameras %}
     <div class="camerasList__list">
         {% for camera in cameras %}
         <div class="camerasList__list__item" unicorn:key="{{ camera.uuid }}">
-            <div id="{{ camera.uuid }}" style="height: 250px"></div>
-            <script type="text/javascript">
-                WowzaPlayer.create('{{ camera.uuid }}',
-                    {
-                    "license": "{{ playerLicence }}",
-                    "title":"{{ camera.description }}",
-                    "description":"_",
-                    "sourceURL":"{{camerasHost}}/live/{{ camera.uuid }}/playlist.m3u8",
-                "autoPlay":false,
-                    "volume":"75",
-                    "mute":false,
-                    "loop":false,
-                    "audioOnly":false,
-                    "uiShowQuickRewind":true,
-                    "uiQuickRewindSeconds":"30"
-                    }
-                );
-                </script>
+          <div id="cam_{{ camera.uuid }}"></div>
+          <script>
+            var player = new Playerjs({
+              id:"cam_{{ camera.uuid }}", 
+              title: "{{ camera.description }}",
+              file:"{{camerasHost}}/live/{{camera.uuid}}/playlist.m3u8"
+            });
+          </script>
         </div>
         {% endfor %}
     </div>
