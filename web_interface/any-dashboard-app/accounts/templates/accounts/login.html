@@ -8,9 +8,14 @@
     <link href="{% sass_src 'accounts.sass' %}" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <div class="mfc_background">
+      <div class="mfc_background__left"></div>
+      <!-- <div class="mfc_background__right"></div> -->
+    </div>
     <div class="auth">
         <div class="auth__header">
             <h1>Авторизация</h1>
+            <span>вход в систему видеонаблюдения</span>
         </div>
         <form method="post" action="">
           {% csrf_token %}

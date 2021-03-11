@@ -7,6 +7,7 @@ services:
     stdin_open: true
     volumes:
       - ./shared_files:/usr/src/app/shared
+      - ./shared_files/db.sqlite3:/db.sqlite3
       - /usr/src/app
     ports:
       - "8000:8000"  

@@ -1,16 +1,36 @@
 .camerasList
     background: rgba(255,255,255, 0.9)
-    width: 95%
-    margin: 0 auto
-    box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.05)
-    border-radius: 10px
+    // width: 95%
+    // margin: 0 auto
+    // box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.05)
+    // border-radius: 10px
+    max-width: 1200px
     padding: 1rem
-    // height: calc(100vh - 85px)
+    h1
+      margin-bottom: 1rem
+    .breadcrumbs
+      font-size: 13px
+      line-height: 13px
+      overflow: hidden
+      height: 18px
+      margin-bottom: 7px
+      white-space: nowrap
+      text-overflow: ellipsis
+      &__element
+        position: relative
+        display: inline
+        height: 100%
+        &__link
+          &:after
+            margin-right: 2px
+            margin-left: 5px
+            content: "» "
+            color: #989798
     &__search-input
       width: 100%
       padding: 1rem
       border: 0
-      border-radius: 25px
+      border-radius: 4px
       margin: 1rem 0
       box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.01)
       outline: none
@@ -20,24 +40,35 @@
       &:focus
         box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.05)
     &__city
-      margin-left: 1rem
-      li 
-        font-weight: bold
+      .city_element
+        margin-bottom: 2rem
+      .litera
+        margin: 0 0.5rem
+        padding-bottom: 0.5rem
       &__address
-        li
-          margin: 0.5rem 1rem
+        display: flex
+        flex-wrap: wrap
+        div
+          // flex: 1 1 300px
+          width: 32%
+          box-sizing: border-box
+          min-width: 32%
           a
-            font-weight: normal  
-            transition: 0.5s
+            display: block
+            padding: 0.5rem
+            color: #444
+            max-width: 300px
+            font-size: 13px
             &:hover
+              background: #f2f2f2
               text-decoration: underline
     &__list
       display: grid
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
       grid-gap: 1rem
       &__item
-          border-radius: 20px
-          overflow: hidden
-          margin: 1rem
           grid-template-columns: repeat(4, 1fr)
           grid-template-rows: repeat(2, 300px)
+
+.litera
+  font-size: 20px            

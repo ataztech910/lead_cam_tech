@@ -1,11 +1,29 @@
+.mfc_background
+    display: flex
+    justify-content: space-between
+    width: 100%
+    height: 100%
+    &__left
+        background: #C79B65
+    &__right
+        background: #E84B37    
+    div
+        width: 100%
 .auth
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    background: rgba(255,255,255, 0.7)
+    background: rgba(255,255,255, 1)
     padding: 2rem
-    border-radius: 20px
+    &__header
+        text-align: center
+        h1
+            font-weight: 500
+        span
+            font-size: 12px
+            margin-bottom: 0.5rem 
+            display: block   
     &__form
         &__input
             input
@@ -16,11 +34,12 @@
                 border: 1px solid #ebebeb
         &__button
             button
-                background: #D6F8DD
+                background: #69321f
                 padding: 0.5rem 2rem
                 border: none
                 cursor: pointer
                 transition: 0.2s
                 outline: none
+                color: #fff
                 &:hover
-                    background: #bdeec7
+                    background: #553327

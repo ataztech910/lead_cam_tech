@@ -16,4 +16,5 @@ class CamlistView(UnicornView):
         print(kwargs.get("id"))
         self.page_id = kwargs.get("id")
         self.cameras = Cameras.objects.filter(address_id__id = self.page_id)
+        print (self.cameras)
         self.address = Addresses.objects.get(id = self.page_id)

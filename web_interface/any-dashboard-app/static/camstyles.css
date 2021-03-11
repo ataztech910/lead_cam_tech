@@ -1,16 +1,32 @@
+@charset "UTF-8";
 .camerasList {
   background: rgba(255, 255, 255, 0.9);
-  width: 95%;
-  margin: 0 auto;
-  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  padding: 1rem;
-  height: calc(100vh - 85px); }
+  max-width: 1200px;
+  padding: 1rem; }
+  .camerasList h1 {
+    margin-bottom: 1rem; }
+  .camerasList .breadcrumbs {
+    font-size: 13px;
+    line-height: 13px;
+    overflow: hidden;
+    height: 18px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+    .camerasList .breadcrumbs__element {
+      position: relative;
+      display: inline;
+      height: 100%; }
+      .camerasList .breadcrumbs__element__link:after {
+        margin-right: 2px;
+        margin-left: 5px;
+        content: "» ";
+        color: #989798; }
   .camerasList__search-input {
     width: 100%;
     padding: 1rem;
     border: 0;
-    border-radius: 25px;
+    border-radius: 4px;
     margin: 1rem 0;
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.01);
     outline: none;
@@ -19,26 +35,36 @@
       content: "\f041"; }
     .camerasList__search-input:focus {
       box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.05); }
-  .camerasList__city {
-    margin-left: 1rem; }
-    .camerasList__city li {
-      font-weight: bold; }
-    .camerasList__city__address li {
-      margin: 0.5rem 1rem; }
-      .camerasList__city__address li a {
-        font-weight: normal;
-        transition: 0.5s; }
-        .camerasList__city__address li a:hover {
+  .camerasList__city .city_element {
+    margin-bottom: 2rem; }
+  .camerasList__city .litera {
+    margin: 0 0.5rem;
+    padding-bottom: 0.5rem; }
+  .camerasList__city__address {
+    display: flex;
+    flex-wrap: wrap; }
+    .camerasList__city__address div {
+      width: 32%;
+      box-sizing: border-box;
+      min-width: 32%; }
+      .camerasList__city__address div a {
+        display: block;
+        padding: 0.5rem;
+        color: #444;
+        max-width: 300px;
+        font-size: 13px; }
+        .camerasList__city__address div a:hover {
+          background: #f2f2f2;
           text-decoration: underline; }
   .camerasList__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1rem; }
     .camerasList__list__item {
-      border-radius: 20px;
-      overflow: hidden;
-      margin: 1rem;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(2, 300px); }
+
+.litera {
+  font-size: 20px; }
 
 /*# sourceMappingURL=camstyles.css.map */

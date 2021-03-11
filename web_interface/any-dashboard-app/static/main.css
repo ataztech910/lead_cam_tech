@@ -2,16 +2,19 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #F5F6F7;
+  background-color: #fff;
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
-  background: url("/static/bg.jpg");
-  color: #141414; }
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #69321f; }
 
 h1 {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 42px;
+  color: #000; }
 
 h3 {
   padding: 0;
@@ -32,15 +35,15 @@ h3 {
   left: 0;
   overflow-x: hidden;
   box-shadow: 9px 1px 15px -5px rgba(0, 0, 0, 0.05);
-  background: #fff; }
+  background: #f2f2f2; }
 
 .right {
   width: 100%;
   margin-left: 130px;
-  padding: 1rem 0.5rem; }
+  padding: 1rem 0.5rem;
+  background: #fff; }
 
 .footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -49,7 +52,8 @@ h3 {
   text-align: center;
   z-index: 0;
   color: #202020;
-  font-size: 11px; }
+  font-size: 11px;
+  display: none; }
 
 ul {
   list-style-type: none;
